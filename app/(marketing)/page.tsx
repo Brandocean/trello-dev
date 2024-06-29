@@ -1,6 +1,6 @@
 import Link from "next/link";
 import localFont from "next/font/local";
-import { Poppins } from "next/font/google"
+import { Poppins } from "next/font/google";
 import { Medal } from "lucide-react";
 
 import { cn } from "@/lib/utils";
@@ -15,9 +15,15 @@ const textFont = Poppins({
   weight: [
     "100",
     "200",
-    
-  ]
-})
+    "300",
+    "400",
+    "500",
+    "600",
+    "700",
+    "800",
+    "900"
+  ],
+});
 
 const MarketingPage = () => {
   return (
@@ -37,8 +43,13 @@ const MarketingPage = () => {
           work forward.
         </div>
       </div>
-      <div className="text-sm md:text-xl text-neutral-400 mt-4 max-w-xd md:max-w-2xl text-center mx-auto">
-        Collaborate, manage projects, and reach new productivity peaks. From high rises to the home office, the way your team works is unique - accomplish it all with Taskify.
+      <div className={cn(
+        "text-sm md:text-xl text-neutral-400 mt-4 max-w-xd md:max-w-2xl text-center mx-auto",
+        textFont.className,
+      )}>
+        Collaborate, manage projects, and reach new productivity peaks.
+        From high rises to the home office, the way your team works is
+        unique - accomplish it all with Taskify.
       </div>
       <Button className="mt-6" size="lg" asChild>
         <Link href="/sign-up">
